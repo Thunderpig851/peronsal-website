@@ -1,0 +1,135 @@
+:root{
+  --bg: #0b0d12;
+  --panel: #11141b;
+  --text: #e6e9ef;
+  --muted: #a6adbb;
+  --brand: #5bbcff;
+  --brand-strong: #2aa4ff;
+  --border: #222633;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+  --radius: 16px;
+  --maxw: 72rem;
+}
+
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #fafbff;
+    --panel: #ffffff;
+    --text: #0f1221;
+    --muted: #4b5563;
+    --border: #e5e7eb;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 10% -10%, rgba(90,188,255,.12), transparent 60%),
+             radial-gradient(900px 500px at 110% 20%, rgba(144,97,249,.10), transparent 60%),
+             var(--bg);
+  line-height:1.6;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  padding:0 1rem;
+  margin-inline:auto;
+}
+
+a{ color:var(--brand); text-decoration:none }
+a:hover{ color:var(--brand-strong); text-decoration:underline }
+
+button, .btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 5%));
+  color:var(--text);
+  padding:.7rem 1rem; border-radius:12px; box-shadow:var(--shadow);
+  cursor:pointer; transition:transform .08s ease, border-color .15s ease;
+}
+button:hover,.btn:hover{ transform:translateY(-1px); border-color:color-mix(in oklab, var(--brand), white 20%) }
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.section{
+  padding: clamp(2rem, 6vw, 5rem) 0;
+}
+
+.grid{
+  display:grid;
+  gap:1.25rem;
+}
+@media (min-width:700px){ .grid.cols-2{ grid-template-columns:repeat(2, 1fr) } }
+@media (min-width:1000px){ .grid.cols-3{ grid-template-columns:repeat(3, 1fr) } }
+
+.visually-hidden{
+  position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px);
+}
+
+header.site{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(140%) blur(10px);
+  background: color-mix(in oklab, var(--bg), transparent 70%);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.75rem 0;
+}
+.nav a.brand{ font-weight:700; letter-spacing:.2px; color:var(--text); text-decoration:none }
+nav ul{ list-style:none; display:flex; gap:.75rem; padding:0; margin:0; }
+nav a.link{
+  padding:.55rem .8rem; border-radius:12px; color:var(--text);
+  border:1px solid transparent;
+}
+nav a.link[aria-current="page"], nav a.link:hover{
+  border-color:var(--border);
+  background:var(--panel);
+  text-decoration:none;
+}
+
+.hero{
+  display:grid; align-items:center; gap:2rem;
+  grid-template-columns:1fr; 
+}
+@media (min-width:900px){
+  .hero{ grid-template-columns: 1.2fr .8fr }
+}
+.hero .title{
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem;
+}
+.hero .subtitle{ color:var(--muted); margin:0 0 1.5rem; max-width:60ch }
+.hero .badge{
+  display:inline-block; padding:.3rem .6rem; border:1px dashed var(--border);
+  border-radius:999px; color:var(--muted); font-size:.9rem;
+}
+.hero-visual{
+  aspect-ratio: 4/3; border-radius:var(--radius);
+  background:
+    radial-gradient(800px 500px at 60% 20%, rgba(90,188,255,.18), transparent 60%),
+    radial-gradient(600px 400px at 10% 80%, rgba(144,97,249,.16), transparent 60%),
+    linear-gradient(180deg, color-mix(in oklab, var(--panel), white 2%), var(--panel));
+  border:1px solid var(--border);
+}
+
+.kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.82rem; }
+.h2{ font-size: clamp(1.4rem, 3vw, 2rem); margin:0 0 .25rem }
+.lead{ color:var(--muted); margin:0 0 1.2rem }
+
+footer.site
+{
+  border-top:1px solid var(--border);
+  padding:2rem 0; color:var(--muted);
+}
