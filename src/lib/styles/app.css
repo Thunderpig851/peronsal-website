@@ -1,40 +1,67 @@
 :root{
-  --bg: #0b0d12;
-  --panel: #11141b;
-  --text: #e6e9ef;
-  --muted: #a6adbb;
-  --brand: #5bbcff;
-  --brand-strong: #2aa4ff;
-  --border: #222633;
-  --shadow: 0 8px 24px rgba(0,0,0,.35);
-  --radius: 16px;
-  --maxw: 72rem;
+  --bg:#08130f;
+  --panel:#0e1f19;
+  --text:#e7f3ec;
+  --muted:#9ab3a7;
+  --brand:#2fbf71;
+  --brand-strong:#23a55a;
+  --border:#1a2d25;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --radius:16px;
+  --maxw:72rem;
 }
 
-@media (prefers-color-scheme: light){
-  :root{
-    --bg: #fafbff;
-    --panel: #ffffff;
-    --text: #0f1221;
-    --muted: #4b5563;
-    --border: #e5e7eb;
-    --shadow: 0 10px 30px rgba(0,0,0,.08);
+@media (prefers-color-scheme: light)
+{
+  :root
+  {
+    --bg:#f4fbf6;
+    --panel:#ffffff;
+    --text:#0f1a16;
+    --muted:#4c5f57;
+    --border:#d9e8df;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+  }
+}
+
+@media (prefers-color-scheme: dark)
+{
+  :root
+  {
+    --bg:#08130f;
+    --panel:#0e1f19;
+    --text:#e7f3ec;
+    --muted:#9ab3a7;
+    --brand:#2fbf71;
+    --brand-strong:#23a55a;
+    --border:#1a2d25;
+  }
+  body
+  {
+    color:var(--text);
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(52,211,153,.12), transparent 60%),
+      radial-gradient(900px 500px at 110% 20%, rgba(16,185,129,.10), transparent 60%),
+      var(--bg);
   }
 }
 
 *{ box-sizing:border-box }
 html,body{ height:100% }
-body{
+body
+{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color:var(--text);
-  background:radial-gradient(1200px 600px at 10% -10%, rgba(90,188,255,.12), transparent 60%),
-             radial-gradient(900px 500px at 110% 20%, rgba(144,97,249,.10), transparent 60%),
-             var(--bg);
-  line-height:1.6;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(52,211,153,.12), transparent 60%),
+    radial-gradient(900px 500px at 110% 20%, rgba(16,185,129,.10), transparent 60%),
+    var(--bg);
+  line-height:1.65;
 }
 
-.container{
+.container
+{
   width:100%;
   max-width:var(--maxw);
   padding:0 1rem;
@@ -43,37 +70,217 @@ body{
 
 a{ color:var(--brand); text-decoration:none }
 a:hover{ color:var(--brand-strong); text-decoration:underline }
+a:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
 
-button, .btn{
+button, .btn
+{
   display:inline-flex; align-items:center; gap:.5rem;
   border:1px solid var(--border);
   background:linear-gradient(180deg, var(--panel), color-mix(in oklab, var(--panel), black 5%));
   color:var(--text);
   padding:.7rem 1rem; border-radius:12px; box-shadow:var(--shadow);
-  cursor:pointer; transition:transform .08s ease, border-color .15s ease;
+  cursor:pointer; transition:transform .08s ease, border-color .15s ease, background .15s ease;
 }
 button:hover,.btn:hover{ transform:translateY(-1px); border-color:color-mix(in oklab, var(--brand), white 20%) }
 
-.card{
-  background:var(--panel);
+.boldWord{ font-weight: 700 }
+.italicWord{ font-style: italic }
+.underline{
+  text-decoration: underline;
+  text-decoration-thickness: .12em;
+  text-underline-offset: .2em;
+}
+
+#resume-header,
+#resume-profile,
+#resume-tech-skills,
+#resume-app-experience,
+#resume-work-experience,
+#resume-education{
+  background: var(--panel);
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  box-shadow: var(--shadow);
 }
 
-.section{
-  padding: clamp(2rem, 6vw, 5rem) 0;
+#resume-profile,
+#resume-tech-skills,
+#resume-app-experience,
+#resume-work-experience,
+#resume-education{
+  margin-block: 1rem;
 }
 
-.grid{
+#resume-profile p,
+#resume-tech-skills p,
+#resume-app-experience p,
+#resume-work-experience p,
+#resume-education p{
+  margin: .25rem 0 .5rem;
+}
+
+#resume-app-experience ul,
+#resume-work-experience ul{
+  margin: .5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+#resume-app-experience li,
+#resume-work-experience li{
+  margin: .35rem 0;
+  padding-left: .15rem;
+}
+
+#resume-profile h2,
+#resume-tech-skills h2,
+#resume-app-experience h2,
+#resume-work-experience h2,
+#resume-education h2
+{
+  margin: 0 0 .5rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  letter-spacing: .2px;
+}
+
+hr
+{
+  font-size:clamp(1.25rem, 2.6vw, 1.75rem);
+  line-height:1.05;
+  margin:0 0 .1rem;
+  border:0;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 1.25rem 0;
+}
+
+#resume-header
+{
+  
+  margin-inline: auto;
+  height: auto;
   display:grid;
-  gap:1.25rem;
+  align-items:start;
 }
-@media (min-width:700px){ .grid.cols-2{ grid-template-columns:repeat(2, 1fr) } }
-@media (min-width:1000px){ .grid.cols-3{ grid-template-columns:repeat(3, 1fr) } }
 
-.visually-hidden{
-  position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px);
+#resume-header h1{
+  margin: 0 0 .2rem;
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  line-height:1.1;
+  letter-spacing:.2px;
+}
+
+#resume-header p{
+  margin:0;
+  color: var(--muted);
+}
+
+#resume-contacts
+{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:.1rem;
+  gap:.4rem .6rem;
+}
+
+#resume-image-download
+{
+  display:flex;
+  flex-direction: right;
+  gap:.4rem;
+  margin-top:.1rem;
+}
+
+#resume-image-download img
+{
+  display:block;
+  max-width:120px;
+  max-height: 200px;
+  height:auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+#resume-image-download a[download]
+{
+  display: inline-flex; 
+}
+
+#resume-contacts p{ margin:0; padding:0 }
+
+#resume-header a[download]{
+  justify-self:start;
+  margin-top:.4rem;
+  border-radius: 999px;
+  padding:.55rem .9rem;
+  border:1px solid var(--border);
+  background: color-mix(in oklab, var(--panel), black 3%);
+  text-decoration:none;
+}
+#resume-header a[download]:hover{
+  border-color: color-mix(in oklab, var(--brand), white 15%);
+}
+
+@media (min-width: 720px)
+{
+  #resume-header
+  {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "name  download"
+      "meta  download"
+      "links download";
+  }
+  #resume-header h1{ grid-area:name }
+  #resume-header p:nth-of-type(1),
+  #resume-header p:nth-of-type(2){ grid-area:meta }
+  #resume-contacts{ grid-area:links }
+  #resume-header a[download]{ grid-area:download; align-self:start }
+}
+
+#resume-tech-skills p{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem .6rem;
+  align-items:baseline;
+  border:1px dashed var(--border);
+  border-radius:12px;
+  background: color-mix(in oklab, var(--panel), black 2%);
+}
+#resume-tech-skills .boldWord{
+  min-width: 12ch;
+  color: var(--text);
+}
+
+#resume-app-experience p > a,
+#resume-work-experience p > a{
+
+  margin-left:.5rem;
+  font-weight:600;
+}
+
+#resume-app-experience p span.boldWord,
+#resume-work-experience p span.boldWord{
+  font-weight:800;
+}
+
+#resume-app-experience li::marker,
+#resume-work-experience li::marker{
+  content: "– ";
+  color: var(--brand);
+}
+
+#resume-app-experience ,
+#resume-work-experience
+{
+}
+
+@media (min-width:1100px){
+  #resume-profile p,
+  #resume-app-experience ul,
+  #resume-work-experience ul{
+    max-width: 85ch;
+  }
 }
 
 header.site{
@@ -82,7 +289,6 @@ header.site{
   background: color-mix(in oklab, var(--bg), transparent 70%);
   border-bottom:1px solid var(--border);
 }
-
 .nav{
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
   padding:.75rem 0;
@@ -98,38 +304,26 @@ nav a.link[aria-current="page"], nav a.link:hover{
   background:var(--panel);
   text-decoration:none;
 }
-
-.hero{
-  display:grid; align-items:center; gap:2rem;
-  grid-template-columns:1fr; 
-}
-@media (min-width:900px){
-  .hero{ grid-template-columns: 1.2fr .8fr }
-}
-.hero .title{
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  line-height:1.1; letter-spacing:-.02em; margin:0 0 1rem;
-}
-.hero .subtitle{ color:var(--muted); margin:0 0 1.5rem; max-width:60ch }
-.hero .badge{
-  display:inline-block; padding:.3rem .6rem; border:1px dashed var(--border);
-  border-radius:999px; color:var(--muted); font-size:.9rem;
-}
-.hero-visual{
-  aspect-ratio: 4/3; border-radius:var(--radius);
-  background:
-    radial-gradient(800px 500px at 60% 20%, rgba(90,188,255,.18), transparent 60%),
-    radial-gradient(600px 400px at 10% 80%, rgba(144,97,249,.16), transparent 60%),
-    linear-gradient(180deg, color-mix(in oklab, var(--panel), white 2%), var(--panel));
-  border:1px solid var(--border);
-}
-
-.kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.82rem; }
-.h2{ font-size: clamp(1.4rem, 3vw, 2rem); margin:0 0 .25rem }
-.lead{ color:var(--muted); margin:0 0 1.2rem }
-
-footer.site
-{
+footer.site{
   border-top:1px solid var(--border);
   padding:2rem 0; color:var(--muted);
+}
+
+.visually-hidden{
+  position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px);
+}
+
+@media print{
+  body{ background:#fff; color:#000 }
+  #resume-header,
+  #resume-profile,
+  #resume-tech-skills,
+  #resume-app-experience,
+  #resume-work-experience,
+  #resume-education{
+    box-shadow:none; border-color:#ddd; background:#fff; break-inside: avoid;
+  }
+  a{ color:#0645ad; text-decoration:underline }
+  #resume-header a[download]{ display:none }
+  hr{ background:#ddd }
 }

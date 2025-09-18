@@ -1,19 +1,16 @@
 <script lang="ts">
 
   import { page } from "$app/stores";
-  import { afterNavigate } from "$app/navigation";
-  import { tick } from "svelte";
 
-  type NavLink = { href: string; label: string , name: string};
+  type NavLink = { href: string; name: string};
   const links: NavLink[] = 
   [ 
-        {href: "/", label: "home", name: "Home"},
-        {href: "/projects", label: "projects", name: "Projects"},
-        {href: "/contact", label: "contact", name: "Contacts"}
+        {href: "/", name: "Home"},
+        {href: "/projects",  name: "Projects"},
+        {href: "/resume", name: "Resume"}
   ];
   
   $: current = $page.url.pathname;
-  const isActive = (href: string) => current === href;
 
 </script>
 
