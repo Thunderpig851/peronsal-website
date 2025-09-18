@@ -1,3 +1,4 @@
+/* General */
 :root{
   --bg:#08130f;
   --panel:#0e1f19;
@@ -91,6 +92,7 @@ button:hover,.btn:hover{ transform:translateY(-1px); border-color:color-mix(in o
   text-underline-offset: .2em;
 }
 
+/* Resume Section  */
 #resume-header,
 #resume-profile,
 #resume-tech-skills,
@@ -221,6 +223,7 @@ hr
   border-color: color-mix(in oklab, var(--brand), white 15%);
 }
 
+
 @media (min-width: 720px)
 {
   #resume-header
@@ -282,7 +285,7 @@ hr
     max-width: 85ch;
   }
 }
-
+/* Header section */
 header.site{
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(140%) blur(10px);
@@ -311,6 +314,71 @@ footer.site{
 
 .visually-hidden{
   position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px);
+}
+
+/* Mobile dropdown (≤500px) */
+.primary-toggle{ display:none }
+
+@media (max-width:500px)
+{
+  .primary-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background: color-mix(in oklab, var(--panel), black 3%);
+  }
+  .primary-toggle .bars{
+    position:relative;
+    width:18px;
+    height:2px;
+    background:var(--text);
+  }
+  .primary-toggle .bars::before,
+  .primary-toggle .bars::after{
+    content:"";
+    position:absolute;
+    left:0; right:0;
+    height:2px;
+    background:var(--text);
+  }
+  .primary-toggle .bars::before{ top:-6px }
+  .primary-toggle .bars::after{ top:6px }
+
+  .nav{ position:relative }
+
+  nav ul.primary-desktop{
+    position:absolute;
+    left:0; right:0;
+    top:100%;
+    margin-top:.5rem;
+    padding:.5rem;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:var(--panel);
+    display:none;
+    flex-direction:column;
+    gap:.25rem;
+  }
+  nav ul.primary-desktop.open{ display:block }
+  nav ul.primary-desktop li + li{ margin-top:.25rem }
+}
+
+@media (min-width:501px)
+{
+  nav ul.primary-desktop
+  {
+    display:flex;
+    gap:.75rem;
+    position:static;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
 }
 
 @media print{
