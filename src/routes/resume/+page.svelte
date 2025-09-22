@@ -130,7 +130,7 @@
 
 <div id="resume-education">
     <h2 class="underline">Education</h2>
-        <p><span class="boldWord"><a href="https://www.appstate.edu/">Appalachian State Univeristy</a></span> 
+        <p><span class="boldWord"><a href="https://www.appstate.edu/">Appalachian State University</a></span> 
             | BS Computer Science | Minor in Mathematics | Data Science Certificate - May 2026 (Expected)</p>
         <p><span class="boldWord"><a href="https://www.hackreactor.com/">Hack Reactor</a></span>
             | Advanced Software Engineering Immersive Program - July 2022</p>

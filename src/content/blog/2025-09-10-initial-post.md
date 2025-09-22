@@ -1,15 +1,15 @@
 ---
 title: "Hello, I’m Cameron Estep"
-date: 2025-09-18
+date: 2025-09-10
 description: "A quick introduction to who I am, what I’m working on, and what you can expect from this blog."
 tags: [introduction, personal, svelte, software]
 draft: false
-cover: /images/covers/intro.webp
+cover: 
 ---
 
 # Hello, I’m Cameron Estep 👋
 
-Welcome to my corner of the internet! I’m a software engineer who loves exploring new technologies, solving tricky problems, and sharing what I learn along the way. This site is my space to document projects, write about experiments, and reflect on my journey as both a developer and a learner. Not to mention it was a pretty good way to get acquanited with Svelte.
+Welcome to my corner of the internet! I’m a software engineer who loves exploring new technologies, solving tricky problems, and sharing what I learn along the way. This site is my space to document projects, write about experiments, and reflect on my journey as both a developer and a learner. Not to mention it was a pretty good way to get acquainted with Svelte.
 
 ### What you’ll find here
 - **Projects**: deep dives into what I’m building, including successes, challenges, and lessons learned.  

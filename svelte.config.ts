@@ -3,8 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
 const mdsvexConfig = {
-  extensions: ['.md', '.svx'] // include .md if you want Markdown files too
-  // remarkPlugins: [], rehypePlugins: [], layout: { blog: 'src/lib/layouts/BlogLayout.svelte' }, etc.
+  extensions: ['.md', '.svx']
 };
 
 const config = {
