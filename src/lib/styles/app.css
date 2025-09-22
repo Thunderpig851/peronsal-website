@@ -158,8 +158,7 @@ hr
 
 #resume-header
 {
-  
-  margin-inline: auto;
+  margin-top: 2rem;
   height: auto;
   display:grid;
   align-items:start;
@@ -503,6 +502,121 @@ footer.site{
   color: var(--brand-strong);
   background-size: 100% 2px;
 }
+
+
+/* Blog Styling */
+.md :where(h1,h2,h3){ line-height:1.2; letter-spacing:.2px }
+.md h1{ font-size:clamp(1.6rem,3vw,2.2rem) }
+.md h2{ font-size:clamp(1.2rem,2.2vw,1.6rem); margin-top:1.6rem }
+.md p{ margin:.75rem 0 }
+.md ul, .md ol{ margin:.75rem 0 .75rem 1.25rem }
+.md blockquote{ border-left:3px solid var(--border); padding:.5rem 1rem; color:var(--muted) }
+.md pre{ padding:1rem; border-radius:12px; background:color-mix(in oklab,var(--panel),black 4%); overflow:auto }
+.md code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace }
+.md a{ color:var(--brand) }
+.md a:hover{ color:var(--brand-strong); text-decoration:underline }
+
+
+:root{
+  --heather:#c9cdd3;
+  --heather-700:#9aa1aa;
+  --accent-white:#ffffff;
+  --accent-black:#000000;
+}
+
+:root{
+  --heather:#c9cdd3;
+  --heather-700:#9aa1aa;
+  --accent-white:#ffffff;
+  --accent-black:#000000;
+}
+
+
+
+
+/* Color Accenting */
+@media (prefers-color-scheme: light){
+  :root{
+    --heather:#bfc4cb;
+    --heather-700:#8f97a2;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --heather:#c9cdd3;
+    --heather-700:#9aa1aa;
+  }
+}
+
+
+header.site{
+  border-bottom:1px solid color-mix(in oklab, var(--heather-700), var(--border) 45%);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--panel), var(--accent-black) 6%), transparent),
+    color-mix(in oklab, var(--bg), transparent 70%);
+}
+
+nav a.link{
+  border-color:transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+nav a.link[aria-current="page"], nav a.link:hover{
+  border-color: color-mix(in oklab, var(--heather-700), var(--border) 30%);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--panel), var(--accent-white) 3%), color-mix(in oklab, var(--panel), var(--accent-black) 4%));
+}
+
+/* buttons pop with heather ring + white/black micro-contrast */
+button, .btn{
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+}
+button:hover,.btn:hover{
+  border-color: color-mix(in oklab, var(--heather), var(--brand) 35%);
+}
+
+#resume-header,
+#resume-profile,
+#resume-tech-skills,
+#resume-app-experience,
+#resume-work-experience,
+#resume-education,
+#blog-landing .post-list{
+  border-color: color-mix(in oklab, var(--border), var(--heather-700) 35%);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.05);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--panel), var(--accent-white) 2%), color-mix(in oklab, var(--panel), var(--accent-black) 3%));
+}
+#blog-landing .post-list:hover{
+  border-color: color-mix(in oklab, var(--heather), var(--brand) 30%);
+  box-shadow:
+    0 12px 36px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+a{ color: var(--brand) }
+a:hover{
+  color: var(--brand-strong);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--accent-white), var(--brand-strong) 60%);
+}
+
+hr{
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--heather-700), var(--border) 35%), transparent);
+}
+
+#resume-header p,
+#blog-landing .muted{
+  color: color-mix(in oklab, var(--muted), var(--heather-700) 40%);
+}
+
+.accent-heather{ color: var(--heather) }
+.accent-border{ border-color: var(--heather-700)!important }
+.accent-outline{ outline:2px solid var(--heather); outline-offset:2px }
+
+
 
 
 

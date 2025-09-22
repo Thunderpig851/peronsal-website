@@ -13,5 +13,7 @@
 </script>
 
 {#if Component}
-  <svelte:component this={Component} />
+  <article class="md">
+    <svelte:component this={Component} />
+  </article>
 {/if}
