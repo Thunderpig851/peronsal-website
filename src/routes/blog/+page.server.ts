@@ -1,7 +1,8 @@
 // src/routes/blog/+page.ts
 import type { PageLoad } from './$types';
 
-type FM = {
+type FM = 
+{
   title: string;
   date: string;
   description?: string;
@@ -10,7 +11,8 @@ type FM = {
   cover?: string;
 };
 
-function toSlug(filepath: string) {
+function toSlug(filepath: string) 
+{
   const file = filepath.split('/').pop()!;
   return file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
 }
@@ -34,9 +36,7 @@ export const load: PageLoad = async () =>
         cover: meta.cover ?? '',
       };
     })
-    // hide drafts in prod, show in dev
     .filter((p) => (import.meta.env.DEV ? true : !p.draft))
-    // newest first
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return { posts };

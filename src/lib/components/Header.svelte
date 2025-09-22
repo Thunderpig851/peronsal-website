@@ -5,8 +5,8 @@
   const links: NavLink[] = [
     { href: "/", name: "Home" },
     { href: "/projects", name: "Projects" },
-    { href: "/resume", name: "Resume" },
-    {href: "/blog", name: "Blog"}
+    {href: "/blog", name: "Blog"},
+    { href: "/resume", name: "Resume" }
   ];
 
   $: current = $page.url.pathname;
