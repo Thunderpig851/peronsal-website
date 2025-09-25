@@ -3,13 +3,13 @@
   const modules = import.meta.glob('/src/content/blog/*.md');
 
   let Component: any = null;
-  $: if (data?.post?.importKey) {
+  $: if (data?.post?.importKey) 
+  {
     (async () => {
       const mod: any = await modules[data.post.importKey]();
       Component = mod.default;
     })();
   }
-  console.log(data);
 </script>
 
 {#if Component}

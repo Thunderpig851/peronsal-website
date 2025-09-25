@@ -2,7 +2,8 @@
   import { page } from "$app/stores";
 
   type NavLink = { href: string; name: string };
-  const links: NavLink[] = [
+  const links: NavLink[] = 
+  [
     { href: "/", name: "Home" },
     { href: "/projects", name: "Projects" },
     {href: "/blog", name: "Blog"},

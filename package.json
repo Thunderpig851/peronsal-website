@@ -32,6 +32,8 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@splidejs/splide": "^4.1.4",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"gray-matter": "^4.0.3",
 		"marked": "^16.3.0",
 		"mdsvex": "^0.12.6"

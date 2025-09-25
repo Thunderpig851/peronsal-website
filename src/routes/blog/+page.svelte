@@ -11,10 +11,9 @@
     }[];
   };
 
-  console.log(data)
-
   const fmt = (iso: string) =>
-    new Date(iso).toLocaleDateString(undefined, {
+    new Date(iso).toLocaleDateString(undefined, 
+    {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -22,7 +21,7 @@
 </script>
 
 <section id="blog-landing" class="container">
-  <h1>Blog</h1>
+  <h1>Recent Posts</h1>
 
   {#if data.posts.length === 0}
     <p>No posts yet.</p>

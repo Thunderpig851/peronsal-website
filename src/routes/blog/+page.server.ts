@@ -22,7 +22,8 @@ export const load: PageLoad = async () =>
   const modules = import.meta.glob('/src/content/blog/*.md', { eager: true });
 
   const posts = Object.entries(modules)
-    .map(([path, mod]) => {
+    .map(([path, mod]) => 
+      {
       const m = mod as { metadata?: FM; default: unknown };
       const meta = m.metadata ?? ({} as FM);
 
