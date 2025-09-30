@@ -10,8 +10,7 @@
             reflections on my class work and life, as well as a full resume.
         </p>
     </div>
+    <div class="intro">
 
-    <!-- <div id="hero-image">
-        <img src="../src/lib/assets/MainPageImage.jpeg" alt="Decent engineer with his wife and dog">
-    </div> -->
+    </div>
 </div>
