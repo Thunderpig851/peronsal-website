@@ -1,6 +1,10 @@
-:root{
+:root
+{
+  --hero-image: url("../assets/MainPageImage.jpeg");
   --bg:#08130f;--panel:#0e1f19;--text:#e7f3ec;--muted:#9ab3a7;--brand:#2fbf71;--brand-strong:#23a55a;--border:#1a2d25;--shadow:0 8px 24px rgba(0,0,0,.35);--radius:16px;--maxw:72rem;
-  --heather:#c9cdd3;--heather-700:#9aa1aa;--accent-white:#fff;--accent-black:#000
+  --heather:#c9cdd3;--heather-700:#9aa1aa;--accent-white:#fff;--accent-black:#000;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 @media (prefers-color-scheme:light){
   :root{--bg:#f4fbf6;--panel:#fff;--text:#0f1a16;--muted:#4c5f57;--border:#d9e8df;--shadow:0 10px 30px rgba(0,0,0,.08);--heather:#bfc4cb;--heather-700:#8f97a2}
@@ -10,14 +14,45 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);line-height:1.65;
+html,body{min-height:100%}
+html
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variation-settings: "slnt" 0, "opsz" 14;
+  font-feature-settings: "liga","kern","ss01","cv01";
+  background: var(--bg);
+}
+body
+{
+  margin:0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--accent-white);
   background:
     radial-gradient(1200px 600px at 10% -10%,rgba(52,211,153,.12),transparent 60%),
     radial-gradient(900px 500px at 110% 20%,rgba(16,185,129,.10),transparent 60%),
-    var(--bg)
+    var(--bg);
+  display:flex;
+  flex-direction:column;
+  min-height:100dvh;
+  min-height:100vh;
 }
+
+h1,h2,h3
+{
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--accent-white);
+}
+
+h1{ font-size: clamp(2.1rem, 4.5vw, 3.2rem); }
+h2{ font-size: clamp(1.5rem, 3vw, 2.2rem); }
+h3{ font-size: clamp(1.15rem, 2vw, 1.5rem); }
+
 .container{width:100%;max-width:var(--maxw);padding:0 1rem;margin-inline:auto}
 
 a{color:var(--brand);text-decoration:none}
@@ -35,6 +70,76 @@ button:hover,.btn:hover{transform:translateY(-1px);border-color:color-mix(in okl
 
 .boldWord{font-weight:700}.italicWord{font-style:italic}
 .underline{text-decoration:underline;text-decoration-thickness:.12em;text-underline-offset:.2em}
+
+/* Layout stretch */
+main{flex:1 0 auto}
+
+/* Home Page layout */
+#main-page{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  align-items:stretch;
+}
+
+/* Home Page */
+#main-page
+{
+  background-image: url("../assets/MainPageImage.jpeg");
+  background-color: var(--accent-white);
+
+  min-height: 85vh;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radius);
+  overflow: hidden;               /* ensures any children don’t poke out */
+  background-clip: padding-box;
+}
+
+#intro
+{
+  flex: 1 1 clamp(22rem, 33vw, 36rem);
+  height: 21rem;
+  max-width: clamp(22rem, 33vw, 36rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--panel), var(--accent-white) 2%),
+    color-mix(in oklab, var(--panel), var(--accent-black) 3%)
+  );
+  opacity: 85%;
+  box-shadow: var(--shadow);
+  backdrop-filter: saturate(120%);
+}
+
+#intro h1
+{
+  margin: 0 0 .5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+#intro p{ margin: .4rem 0; max-width: 70ch; }
+
+@media (max-width: 640px)
+{
+  #intro{ max-width: 100%; }
+}
+
+@media (max-width: 900px){
+  #intro{
+    flex:1 1 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
 
 /* Resume blocks */
 #resume-header,#resume-profile,#resume-tech-skills,#resume-app-experience,#resume-work-experience,#resume-education{
@@ -119,7 +224,8 @@ footer.site{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted)
 }
 
 /* Print */
-@media print{
+@media print
+{
   body{background:#fff;color:#000}
   #resume-header,#resume-profile,#resume-tech-skills,#resume-app-experience,#resume-work-experience,#resume-education{
     box-shadow:none;border-color:#ddd;background:#fff;break-inside:avoid
@@ -162,7 +268,17 @@ footer.site{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted)
 }
 
 /* Card (for carousel) */
-.card{width:280px;display:flex;flex-direction:column;gap:.6rem;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:transform .15s ease,border-color .15s ease}
+.card{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;background:var(--panel);
+  color:var(--text);border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:transform .15s ease,
+  order-color .15s ease
+}
 .card:hover{transform:translateY(-2px);border-color:var(--brand)}
 .media{display:block;aspect-ratio:4/3;overflow:hidden}
 .media img{width:100%;height:100%;object-fit:cover;display:block}
@@ -173,12 +289,23 @@ footer.site{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted)
 .link:hover{color:var(--brand)}
 .muted{color:var(--muted)}
 .card-body ul{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:.25rem 0 0}
-.card-body li{font-size:.8rem;line-height:1;padding:.25rem .5rem;border:1px solid var(--border);border-radius:999px;background:var(--panel);color:var(--text)}
+.card-body li{
+  font-size:.8rem;
+  line-height:1;padding:.25rem .5rem;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--panel);
+  color:var(--text)
+}
 .footer{margin-top:.25rem}
-.tag{font-size:.78rem;padding:.2rem .55rem;border:1px solid var(--border);border-radius:999px;background:transparent;color:var(--text)}
+.tag{
+  font-size:.78rem;
+  padding:.2rem .55rem;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:transparent;
+  color:var(--text)
+}
+#splide-carousel{padding: 5rem 0 5rem 0}
+
 @media (max-width:420px){.card{width:240px}}
-
-
-
-
-

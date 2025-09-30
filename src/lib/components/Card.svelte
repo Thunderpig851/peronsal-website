@@ -5,7 +5,7 @@
     export let href = '#';
     export let alt = '';
     export let tag = '';
-    export let stack: string[] = [];
+    export let stack = "";
 </script>
 
 <article class="card">
@@ -20,11 +20,7 @@
             <h3 class="muted">{description}</h3>
         {/if}
         {#if stack}
-            <ul>
-                {#each stack as item}
-                <li>{item}</li>
-                {/each}
-            </ul>
+            <p>{stack}</p>
         {/if}
         {#if tag}
             <div class="footer"><span class="tag">{tag}</span></div>

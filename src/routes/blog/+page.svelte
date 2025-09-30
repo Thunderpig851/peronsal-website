@@ -30,7 +30,9 @@
           <div class="post-list">
               <h2><a class="link" href={`/blog/${post.slug}`}>{post.title}</a></h2>
               <p class="muted">{fmt(post.date)}</p>
-              {#if post.description}<p>{post.description}</p>{/if}
+              {#if post.description}
+                <p>{post.description}</p>
+              {/if}
           </div>
       {/each}
   {/if}
