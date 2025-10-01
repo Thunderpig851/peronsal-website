@@ -20,8 +20,8 @@
         </p>
     </div>
     <div id="resume-image-download">
-        <a href="/static/CE_AppState_Resume.doc" download="CamEstepResume">Download Resume</a>
-        <img src="/static/IMG_0303.webp" alt="Very capable software engineer and a very cute dog.">
+        <a href="/CE_AppState_Resume.doc" download="CamEstepResume">Download Resume</a>
+        <img src="/IMG_0303.webp" alt="Very capable software engineer and a very cute dog.">
     </div>
 </div>
 <hr>
