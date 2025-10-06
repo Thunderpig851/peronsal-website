@@ -38,7 +38,7 @@
         <p><span class="boldWord">Programming Languages</span>
             C++ | Java | Python 3 | JavaScript (ES6+) | SQL</p>
         <p><span class="boldWord">Front-End Frameworks</span>
-            React| Redux Toolkit | Svelte | Tailwinds</p>
+            React | Redux Toolkit | Svelte | Tailwinds</p>
         <p><span class="boldWord">Back-End</span>
             Django 4 | FastAPI | PostgreSQL | MongoDB | Docker</p>
         <p><span class="boldWord">System Design</span>

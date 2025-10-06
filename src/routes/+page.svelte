@@ -10,7 +10,4 @@
             reflections on my class work and life, as well as a full resume.
         </p>
     </div>
-    <div class="intro">
-
-    </div>
 </div>
