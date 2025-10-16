@@ -26,6 +26,16 @@
 </div>
 <hr>
 
+<div id="resume-education">
+    <h2 class="underline">Education</h2>
+        <p><span class="boldWord"><a href="https://www.appstate.edu/">Appalachian State University</a></span> 
+            | BS Computer Science | Minor in Mathematics | Data Science Certificate - May 2026 (Expected)</p>
+        <p><span class="boldWord"><a href="https://www.hackreactor.com/">Hack Reactor</a></span>
+            | Advanced Software Engineering Immersive Program - July 2022</p>
+</div>
+
+<hr>
+
 <div id="resume-profile">
     <h2 class="underline">Profile</h2>
     <p>Dynamic software development team member with expertise in optimizing designs to 
@@ -124,14 +134,4 @@
                 Providing remote and occasional on-site support of battalion VoIP service installation, moves, and modifications.
             </li>
         </ul>
-</div>
-
-<hr>
-
-<div id="resume-education">
-    <h2 class="underline">Education</h2>
-        <p><span class="boldWord"><a href="https://www.appstate.edu/">Appalachian State University</a></span> 
-            | BS Computer Science | Minor in Mathematics | Data Science Certificate - May 2026 (Expected)</p>
-        <p><span class="boldWord"><a href="https://www.hackreactor.com/">Hack Reactor</a></span>
-            | Advanced Software Engineering Immersive Program - July 2022</p>
 </div>

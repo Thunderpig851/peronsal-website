@@ -5,8 +5,11 @@ import { mdsvex } from 'mdsvex';
 
 const mdsvexConfig = { extensions: ['.md', '.svx'] };
 
-export default {
+const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
   preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
   kit: { adapter: adapter() }
 };
+
+export default config;
+
