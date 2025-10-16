@@ -17,14 +17,17 @@
    ========================= */
 *{box-sizing:border-box}
 html,body{height:100%}
-html{
+html
+{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   text-rendering:optimizeLegibility;
   font-variation-settings:"slnt" 0,"opsz" 14;
   font-feature-settings:"liga","kern","ss01","cv01";
 }
-body{
+
+body
+{
   margin:0;
   font-family:var(--font-sans);
   font-weight:400;
@@ -35,7 +38,8 @@ body{
     var(--bg);
 }
 
-h1,h2,h3{
+h1,h2,h3
+{
   font-family:var(--font-display);
   font-weight:700;
   letter-spacing:-0.02em;
