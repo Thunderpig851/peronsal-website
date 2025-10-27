@@ -1,11 +1,13 @@
 ---
 title: "Data, Privacy, and the Line We Keep Redrawing"
 date: 2025-10-27
-tags: [ethics, privacy, data, class, reflections]
-summary: A straight-shooting reflection on our class week: TED talks on privacy, the “What Did You Find” hunt, and reading actual privacy policies without the PR varnish.
+description: "A straight-shooting reflection on our class week: TED talks on privacy, the 'What Did You Find' hunt, and reading actual privacy policies without the PR varnish."
+tags: [ethics, privacy, surveillance, class, data]
+layout: blog
+draft: false
 ---
 
-## The headline
+## The Headline
 
 This week finally clicked something into place: privacy isn’t a settings toggle; it’s a shifting power relationship. Every “feature” that watches me is a trade I didn’t negotiate, and the defaults are designed so I’ll forget to negotiate at all.
 
@@ -55,10 +57,4 @@ Reading the policies back-to-back made the choreography obvious:
 ## The questions I’m not done with
 
 1. How do we **prove** minimization to users without revealing attack surface?
-2. What’s a practical retention policy for student apps that isn’t “forever or 30 days”?
-3. Can we make “consent” real by adding **meaningful alternatives** (pay, local-only, degraded mode) instead of “take it or leave it”?
-4. How do we detect and block **secondary use** when the harm travels through a partner’s pipeline, not ours?
-
-## Closing thought
-
-If privacy is a power problem, then the ethical move isn’t better wording; it’s **less collection, fewer joins, shorter clocks, and real exits**. That’s build-time work, not a footer link.
+2. What’s a practical retention policy for student a
