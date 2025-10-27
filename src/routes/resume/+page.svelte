@@ -3,7 +3,6 @@
     <div id="personal-info">
         <h1>Cameron Estep</h1>
         <p>Boone, NC</p>
-        <p>(984)319-9503</p>
         <p>camestep8517@gmail.com</p>
     </div>
     <div id="resume-contacts">
