@@ -1,9 +1,10 @@
 ---
 title: "Three Things I Learned This Year (and What I Want Next)"
-date: "2025-12-11"
+date: 2025-12-11
 description: "Three lessons I’m taking with me from this year, plus one change I’d love to see in future classes."
 tags: ["reflection", "school", "writing", "computer-science"]
 layout: blog
+draft: false
 ---
 
 This year taught me a lot, but the most valuable takeaways were not single facts or isolated skills. They were patterns. Things I can reuse in other classes, projects, and work settings. If I had to boil it down, these are the three lessons I’m carrying forward.
