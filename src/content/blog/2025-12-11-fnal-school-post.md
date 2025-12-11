@@ -31,9 +31,7 @@ That process trained me to be more patient and more systematic, which ends up sa
 
 ## A suggestion for future classes
 
-If I could add one thing to future versions of these classes, it would be more structured practice around **real-world workflow**: small checkpoints, clear rubrics for what “done” means, and short feedback cycles that encourage iteration.
-
-Even something simple, like requiring a brief README, a short reflection on tradeoffs, or a “known issues” section for projects, would push learning in a direction that matches how work happens outside the classroom. It also helps students get comfortable admitting what is unfinished, what is uncertain, and what they would improve next.
+If I could add one thing to future versions of these classes, it would be more practice that feels like the real world. More mock interviews, more chances to explain your thinking out loud, and more time spent on systems design problems where there is not one perfect answer.
 
 ## Closing thought
 
