@@ -56,6 +56,24 @@
 
 <div id="resume-app-experience">
     <h2 class="underline">Application Development Experience</h2>
+        <p><span class="boldWord">Leyline</span>
+            <a href="https://github.com/Thunderpig851/Leyline">Github</a>
+            | React | Socket.IO | MongoDB | mediasoup | AI Card Identification Microservice</p>
+        <p><span class="italicWord"></span>
+            Built a live tabletop platform for running remote card-based games with shared room state, video, AI-enhanced on-click card identification, and in-game tools.
+        </p>
+        <ul>
+            <li>
+                Used Socket.IO to synchronize room membership and player actions across active game sessions.
+            </li>
+            <li>
+                Integrated mediasoup for video support while keeping media transport separate from card and table interactions.
+            </li>
+            <li>
+                Built-in on-click card identification microservice to help players inspect cards during live sessions.
+            </li>
+        </ul>
+        <br>
         <p><span class="boldWord">Lit-Hub</span>
             <a href="https://github.com/Blue-Ocean-Koi-Fish">Github</a> 
             | React.js | Express | Dexie | MongoDB</p>

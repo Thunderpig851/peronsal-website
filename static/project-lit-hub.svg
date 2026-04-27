@@ -1,0 +1,15 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#08120E"/>
+  <rect x="64" y="64" width="1472" height="872" rx="36" fill="#10221B" stroke="#214136" stroke-width="4"/>
+  <circle cx="1320" cy="220" r="170" fill="#3AD29A" fill-opacity="0.18"/>
+  <circle cx="300" cy="790" r="210" fill="#1AB47C" fill-opacity="0.13"/>
+  <path d="M200 190C270 165 340 152 420 152C575 152 675 222 760 308V764C669 702 558 662 420 662C341 662 267 675 200 703V190Z" fill="#0A1511" stroke="#2C5B49" stroke-width="4"/>
+  <path d="M820 308C905 222 1005 152 1160 152C1240 152 1310 165 1380 190V703C1313 675 1239 662 1160 662C1022 662 911 702 820 764V308Z" fill="#0A1511" stroke="#2C5B49" stroke-width="4"/>
+  <path d="M800 300V776" stroke="#34D89E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M285 280H630" stroke="#79EBC1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M285 344H620" stroke="#31D99F" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <path d="M970 280H1310" stroke="#79EBC1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M970 344H1300" stroke="#31D99F" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <text x="144" y="112" fill="#EAF7F0" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Lit-Hub</text>
+  <text x="144" y="892" fill="#8BB8A8" font-family="Arial, Helvetica, sans-serif" font-size="34">Accessible reading with offline-first support</text>
+</svg>

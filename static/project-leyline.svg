@@ -1,0 +1,18 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#07110E"/>
+  <rect x="64" y="64" width="1472" height="872" rx="36" fill="#0D1E19" stroke="#1F3B31" stroke-width="4"/>
+  <circle cx="1360" cy="180" r="180" fill="#18B47C" fill-opacity="0.18"/>
+  <circle cx="1220" cy="220" r="90" fill="#1CD7A0" fill-opacity="0.18"/>
+  <circle cx="250" cy="170" r="120" fill="#13B06F" fill-opacity="0.12"/>
+  <rect x="144" y="140" width="680" height="440" rx="28" fill="#08130F" stroke="#2D5A4A" stroke-width="3"/>
+  <rect x="860" y="140" width="596" height="220" rx="24" fill="#10261F"/>
+  <rect x="860" y="390" width="596" height="190" rx="24" fill="#10261F"/>
+  <rect x="144" y="632" width="1312" height="208" rx="28" fill="#10261F"/>
+  <path d="M230 280C310 220 418 215 500 262C590 314 694 313 770 255" stroke="#20C890" stroke-width="10" stroke-linecap="round"/>
+  <path d="M924 478H1320" stroke="#27D79B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M924 520H1240" stroke="#79EABF" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <path d="M240 706H1150" stroke="#30DBA0" stroke-width="12" stroke-linecap="round"/>
+  <path d="M240 752H1020" stroke="#7AECC2" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+  <text x="144" y="94" fill="#EAF7F0" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Leyline</text>
+  <text x="144" y="892" fill="#8BB8A8" font-family="Arial, Helvetica, sans-serif" font-size="34">Video-first tabletop play platform</text>
+</svg>

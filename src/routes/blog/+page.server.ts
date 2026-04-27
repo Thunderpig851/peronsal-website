@@ -1,5 +1,5 @@
-// src/routes/blog/+page.ts
-import type { PageLoad } from './$types';
+// src/routes/blog/+page.server.ts
+import type { PageServerLoad } from './$types';
 
 type FM = 
 {
@@ -17,7 +17,7 @@ function toSlug(filepath: string)
   return file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
 }
 
-export const load: PageLoad = async () => 
+export const load: PageServerLoad = async () =>
 {
   const modules = import.meta.glob('/src/content/blog/*.md', { eager: true });
 

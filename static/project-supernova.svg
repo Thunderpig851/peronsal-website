@@ -1,0 +1,25 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#07110E"/>
+  <rect x="64" y="64" width="1472" height="872" rx="36" fill="#0E2019" stroke="#214136" stroke-width="4"/>
+  <circle cx="1180" cy="250" r="130" fill="#1BC887" fill-opacity="0.18"/>
+  <circle cx="1180" cy="250" r="48" fill="#88F0C8"/>
+  <path d="M1180 70V150" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1180 350V430" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1000 250H1080" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1280 250H1360" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1054 124L1109 179" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1251 321L1306 376" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1306 124L1251 179" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1109 321L1054 376" stroke="#8BF3CE" stroke-width="12" stroke-linecap="round"/>
+  <rect x="160" y="156" width="620" height="660" rx="28" fill="#0A1511" stroke="#2C5A49" stroke-width="4"/>
+  <rect x="224" y="230" width="492" height="90" rx="20" fill="#10261F"/>
+  <rect x="224" y="366" width="492" height="90" rx="20" fill="#10261F"/>
+  <rect x="224" y="502" width="492" height="90" rx="20" fill="#10261F"/>
+  <rect x="224" y="638" width="492" height="90" rx="20" fill="#10261F"/>
+  <path d="M286 276H492" stroke="#31D99F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M286 412H560" stroke="#79EBC1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M286 548H520" stroke="#31D99F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M286 684H610" stroke="#79EBC1" stroke-width="10" stroke-linecap="round"/>
+  <text x="144" y="112" fill="#EAF7F0" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Supernova Expansion</text>
+  <text x="144" y="892" fill="#8BB8A8" font-family="Arial, Helvetica, sans-serif" font-size="34">High-throughput backend scaling and load balancing</text>
+</svg>

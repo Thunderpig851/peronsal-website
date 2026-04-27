@@ -1,27 +1,48 @@
 <script lang="ts">
     export let title: string;
-    export let description: string;
-    export let image = ''; // URL
+    export let description = '';
+    export let image = '';
     export let href = '#';
     export let alt = '';
     export let tag = '';
-    export let stack = "";
+    export let stack = '';
+    export let githubUrl = '';
 </script>
 
-<article class="card">
+<article class="card project-card">
+    <a class="card-stretch-link" href={href} aria-label={`Open ${title} on the projects page`}></a>
+
     {#if image}
-        <a class="media" href={href} aria-label={title}>
-            <img src={image} alt={alt} loading="lazy" />
-        </a>
+        <div class="media">
+            <img src={image} alt={alt || `${title} preview image`} loading="lazy" />
+        </div>
     {/if}
+
     <div class="card-body">
-        <h1><a class="link" href={href}>{title}</a></h1>
+        <div class="card-top-row">
+            <h1>{title}</h1>
+
+            {#if githubUrl}
+                <a
+                    class="github-link"
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${title} on GitHub`}
+                >
+                    GitHub
+                </a>
+            {/if}
+        </div>
+
         {#if description}
-            <h3 class="muted">{description}</h3>
+            <p class="muted">{description}</p>
         {/if}
+
         {#if stack}
-            <p>{stack}</p>
+            <p class="stack">{stack}</p>
         {/if}
+
         {#if tag}
             <div class="footer"><span class="tag">{tag}</span></div>
         {/if}

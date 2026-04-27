@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 
 // filename -> slug: strip YYYY-MM-DD- and .md
@@ -6,7 +6,7 @@ const toSlug = (p: string) =>
   p.split('/').pop()!.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
 
 
-export const load: PageLoad = async ({ params }) => 
+export const load: PageServerLoad = async ({ params }) =>
 {
   const modules = import.meta.glob('/src/content/blog/*.md', { eager: true });
 
